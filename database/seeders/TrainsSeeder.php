@@ -33,16 +33,16 @@ class TrainsSeeder extends Seeder
                 
         for($i = 0; $i < 10; $i++) {
             // Train::create($train);
-            Train::creare([
-                'id' => $faker->rand(1,100),
+            Train::create([
+                'id' => $i,
                 'azienda' => $faker->bothify('?????-##'),
-                'stazione partenza' => $faker->address(),
-                'stazione arrivo' => $faker->city(),
-                'ora partenza' => $faker->time(),
-                'ora arrivo' => $faker->time(),
-                'codice treno' => $faker->bothify('??-####'),
-                'carrozze' => $faker->rand(1,10) ,
-                'in orario' => $faker->boolean(),
+                'stazione_partenza' => $faker->address(),
+                'stazione_arrivo' => $faker->city(),
+                'ora_partenza' => $faker->time(),
+                'ora_arrivo' => $faker->time(),
+                'codice_treno' => $faker->bothify('??-####'),
+                'carrozze' => $faker->randomNumber(1,10) ,
+                'in_orario' => $faker->boolean(),
                 'cancellato' => $faker->boolean(),
             ]);
         }
